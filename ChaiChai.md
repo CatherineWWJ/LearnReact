@@ -122,3 +122,11 @@ npm start
 > clientX, clientY：尺寸
 >
 > target：事件发生的元素
+
+## 触发事件传递自定义参数
+
+> 改造成箭头函数的调用执行方式即可
+>
+> 1.只需要一个额外参数   {clickHandler} -> {() => clickHandler('自定义的参数')}
+>
+> 2.既需要e也需要额外的参数    {clickHandler} -> {(e) => clickHandler(e, '自定义的参数')}
