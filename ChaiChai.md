@@ -234,3 +234,76 @@ const {list, person, getMsg, child} = props  // 举例
 
 > 利用共同的父组件实现兄弟通信
 
+## 跨组件通信Context
+
+> 无需通过中间层，可以由上层组件向任意的下层组件发放数据
+>
+> *1.导入createContext方法并执行，结构提供者 + 消费者*
+>
+> ```
+> import React,{createContext} from "react";
+> const {Provider, Consumer} = createContext()
+> ```
+>
+> *2.使用Provider包裹根组件的模板*
+>
+> *3.通过Consumer使用数据*
+>
+> ```
+> <Consumer>
+> 	{/* 箭头函数的格式固定写法 */}
+> 	{value=><span>{value}</span>}
+> </Consumer>
+> ```
+
+# 组件进阶
+
+## props的children属性
+
+> *只要在子组件标签内写了内容，会默认给到props的children属性*
+>
+> 可以是函数、JSX等
+
+## [props校验](https://legacy.reactjs.org/docs/typechecking-with-proptypes.html)
+
+> 限定传递数据类型
+
+## props校验-默认值
+
+> 函数组件：
+>
+> 1.使用defaultProps
+>
+>  2.函数参数默认值（更推荐）
+>
+> 类组件：
+>
+> 1.使用defaultProps
+>
+> 2.static类静态属性定义（更推荐）
+
+# [生命周期](https://blog.csdn.net/luobo2345/article/details/122818947)
+
+> 只有类组件才有生命周期（类组件需要实例化，而函数组件不需要）
+
+## 挂载阶段
+
+钩子函数执行顺序：
+
+> constructor：初始化时执行一次
+>
+> render：每次组件渲染时都会触发
+>
+> componentDidMount：进行ajax请求		类似于vue中的mounted		最重要！！！
+
+## 更新阶段
+
+钩子函数执行顺序：
+
+> render：渲染UI
+>
+> componentDidUpdate
+
+## 卸载阶段
+
+> componentWillUnmount：组件卸载，执行清理工作
