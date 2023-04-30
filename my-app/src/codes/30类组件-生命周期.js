@@ -19,7 +19,7 @@ class Test extends React.Component{
       <div>test</div>
     )
   }
-} 
+}
 
 class App extends React.Component {
   constructor() {

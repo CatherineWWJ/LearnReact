@@ -307,3 +307,37 @@ const {list, person, getMsg, child} = props  // 举例
 ## 卸载阶段
 
 > componentWillUnmount：组件卸载，执行清理工作
+
+# [组件库antd](https://ant.design/index-cn)
+
+# 包管理器yarn
+
+> react项目中通过npm下载依赖包很容易出现版本冲突的问题！！
+>
+> yarn包管理器速度更快，安装依赖包不容易出现版本冲突
+
+## 安装下载
+
+```
+npm install -g yarn // 安装
+
+yarn --version // 查看版本
+
+// 设置国内源镜像
+yarn config set registry https://registry.npm.taobao.org -g
+yarn config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
+
+yarn add xxx // 安装依赖包
+```
+
+# Hooks
+
+## 概念
+
+> 一套能够使函数组件更强大，更灵活的钩子
+>
+> 钩子：在某一个时机下自动执行
+>
+> 产生：让函数组件拥有自己的状态
+
+ 
