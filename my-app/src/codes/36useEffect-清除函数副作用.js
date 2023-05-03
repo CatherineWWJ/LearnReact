@@ -6,6 +6,7 @@ function Test() {
       console.log('定时器执行了！');
     }, 1000)
     return () => {
+      // 清理的动作 组件清理的时候同时将定时器也一起销毁
       clearInterval(timer)
     }
   }, [])

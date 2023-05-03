@@ -359,3 +359,25 @@ yarn add xxx // 安装依赖包
 >   }, [count])
 > ```
 
+## useRef
+
+```
+import React, {useRef, useEffect} from "react"
+
+const testRef = useRef(null)
+
+<TestC ref={testRef}></TestC>
+
+// 通过ref.current可以访问组件的各种属性（状态和方法等）
+console.log(testRef.current);
+```
+
+## useContext
+
+> 在hook下实现跨组件通信
+>
+> 静态：Context如果要传递的数据	只需要在整个应用初始化的时候**传递一次**就可以	就可以选择在index.js文件里做数据提供
+>
+> 动态：如果Context需要传递数据并且将来还需要**再对数据做修改**	底层组件也需要跟着一起变	就写到app.js文件里做数据提供
+
+# react-router-v6
