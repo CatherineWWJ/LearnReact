@@ -381,3 +381,57 @@ console.log(testRef.current);
 > 动态：如果Context需要传递数据并且将来还需要**再对数据做修改**	底层组件也需要跟着一起变	就写到app.js文件里做数据提供
 
 # react-router-v6
+
+## 基础使用
+
+## 核心组件BrowserRouter
+
+> 作用：包裹整个应用，一个react应用只需要使用一次
+>
+> 2种常用的Router：HashRouter		BrowserRouter
+>
+> HashRouter：多'#' 
+>
+> BrowserRouter：更推荐✅
+
+## 核心组件Link
+
+> 最终会渲染为a链接
+
+## 核心组件Routes
+
+## 核心组件Route
+
+## 编程式导航-跳转
+
+> useNavigate
+
+## 路由跳转携带参数
+
+1. searchParams
+
+   ```
+   import { useSearchParams, useParams } from "react-router-dom"
+   
+   navigate('/about?id=1001') // 拼接路由的方式
+   
+   const [params] = useSearchParams()
+   const id = params.get('id')
+   ```
+
+   
+
+2. params
+
+   ```
+   import { useSearchParams, useParams } from "react-router-dom"
+   
+   <Route path='/about/:id' element={<About></About>}></Route> // 路由这里需要占位
+   navigate('/about/1001')
+   
+   const params = useParams()
+   const id = params.id
+   ```
+
+## 嵌套路由
+
